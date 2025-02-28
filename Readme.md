@@ -45,3 +45,6 @@ I've chosen this project because it combines a fun, light-hearted theme with the
 **Test**
 * **Test 1**: Test the user authentication system to ensure it works correctly.
 * **Test 2**: Test the rating system to ensure it updates correctly.
+* **Test 3**: Test the comment section to ensure it allows users to leave comments.
+* **Test 4**: Test the user contribution system to ensure it allows users to upload their own
+ugly shoe finds.
