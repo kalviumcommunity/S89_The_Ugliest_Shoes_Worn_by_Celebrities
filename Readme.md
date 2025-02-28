@@ -3,6 +3,7 @@
 
 ### Project Overview:
 This project aims to create an entertaining and humorous app where users can explore a constantly updated list of the ugliest and most bizarre shoes worn by celebrities. The goal is to provide a fun platform for users to rate, comment on, and share these fashion mishaps while learning web development skills.
+this is the craysiest ideia.
 
 ### Key Features:
 1. ** User Authentication **: Secure login and registration for users.
@@ -39,3 +40,8 @@ I've chosen this project because it combines a fun, light-hearted theme with the
 - Deploying web applications to production environments.
 - Optionally, learning about advanced topics like Docker, SSR, and caching.
 
+## Test
+
+**Test**
+* **Test 1**: Test the user authentication system to ensure it works correctly.
+* **Test 2**: Test the rating system to ensure it updates correctly.
