@@ -1,35 +1,23 @@
-const express = require('express');
-const mongoose = require('mongoose');
-require('dotenv').config(); // Load environment variables from .env
+const express = require("express");
+const mongoose = require("mongoose");
+const router = require("./router"); // Importing the router
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+app.use(express.json()); // Middleware for parsing JSON
 
-// MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect("mongodb://localhost:27017/yourDatabase", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
-    console.log('MongoDB connected successfully!');
+    console.log("Connected to the database");
 }).catch((err) => {
-    console.error('MongoDB connection failed:', err);
+    console.log("Database connection error:", err);
 });
 
-// Routes
-app.get('/ping', (req, res) => {
-    res.send('pong');
-});
+// Use the routes
+app.use("/", router);
 
-app.get('/status', async (req, res) => {
-    try {
-        await mongoose.connection.db.admin().command({ ping: 1 }); // Pinging the database
-        res.send('Database connection status: Connected!');
-    } catch (error) {
-        res.send('Database connection status: Failed to connect.');
-    }
-});
-
-// Start server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+// Start the server
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
 });
