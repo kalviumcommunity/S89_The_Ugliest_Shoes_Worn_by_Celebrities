@@ -1,11 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./router"); // Importing the router
+const dotenv = require("dotenv")
+dotenv.config();
+const cors = require("cors");
+
 
 const app = express();
 app.use(express.json()); // Middleware for parsing JSON
+app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/yourDatabase", {
+mongoose.connect(process.env.MONGOBD_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
