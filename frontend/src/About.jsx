@@ -19,6 +19,19 @@ const About = () => {
       }}>
         ✨ Discover More ✨
       </button>
+      <div>
+      <button onClick={() => navigate('/form')} style={{
+        padding: "10px 20px",
+        fontSize: "16px",
+        cursor: "pointer",
+        backgroundColor: "#e63946",
+        color: "white",
+        border: "none",
+        borderRadius: "5px",
+      }}>
+        ✨ Form ✨
+      </button>
+      </div>
     </div>
   );
 };
