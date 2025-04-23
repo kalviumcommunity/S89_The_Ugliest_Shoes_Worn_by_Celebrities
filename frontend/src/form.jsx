@@ -19,7 +19,7 @@ const UserForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/post", formData);
+            const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/post`, formData);
             if (response && response.data) {
                 alert("User created: " + JSON.stringify(response.data));
             } else {
@@ -34,6 +34,8 @@ const UserForm = () => {
             }
         }
     };
+    
+    
 
     return (
         <form onSubmit={handleSubmit}>
