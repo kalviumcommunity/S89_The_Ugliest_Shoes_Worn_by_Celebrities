@@ -31,6 +31,17 @@ const About = () => {
       }}>
         ✨ Form ✨
       </button>
+      <button onClick={() => navigate('/entity')} style={{
+        padding: "10px 20px",
+        fontSize: "16px",
+        cursor: "pointer",
+        backgroundColor: "#e63946",
+        color: "white",
+        border: "none",
+        borderRadius: "5px",
+      }}>
+        ✨ entity ✨
+      </button>
       </div>
     </div>
   );

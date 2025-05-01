@@ -18,7 +18,6 @@ mongoose.connect(process.env.MONGOBD_URL, {
 }).catch((err) => {
     console.log("Database connection error:", err);
 });
-
 // Use the routes
 app.use("/", router);
 
@@ -26,3 +25,4 @@ app.use("/", router);
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
+
